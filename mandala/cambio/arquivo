@@ -1,0 +1,97 @@
+;CODE;NAME
+3961;BM_ERC;Taxa de câmbio - R$ / US$ - comercial - compra - média
+3962;BM_ERCF;Taxa de câmbio - R$ / US$ - comercial - compra - fim período
+3963;BM_ERV;Taxa de câmbio - R$ / US$ - comercial - venda - média
+3964;BM_ERVF;Taxa de câmbio - R$ / US$ - comercial - venda - fim período
+3966;BM12_ERC12;Taxa de câmbio - R$ / US$ - comercial - compra - média
+3967;BM12_ERCF12;Taxa de câmbio - R$ / US$ - comercial - compra - fim período
+3968;BM12_ERFF12;Taxa de câmbio - R$ / US$ - flutuante - venda - fim período
+3969;BM12_ERV12;Taxa de câmbio - R$ / US$ - comercial - venda - média
+3970;BM12_ERVF12;Taxa de câmbio - R$ / US$ - comercial - venda - fim período
+3986;BMF366_FUT1DOL366;Taxa de câmbio - R$ / US$ - comercial - futuro: vencimento em t+1
+3987;BMF366_FUT3DOL366;Taxa de câmbio - R$ / US$ - comercial - futuro: vencimento em t+3
+3988;BMF366_FUT3DOLV366;Taxa de câmbio - R$ / US$ - comercial - futuro: vencimento em t+3 - volatilidade
+3989;BMF366_FUT6DOL366;Taxa de câmbio - R$ / US$ - comercial - futuro: vencimento em t+6
+3992;GAC12_TCERARG12;Taxa de câmbio real bilateral - IPA-EP-DI - Brasil/Argentina - índice (média 2010 = 100)
+3993;GAC12_TCERBEL12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Bélgica - índice (média 2010 = 100)
+3994;GAC12_TCERCAN12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Canadá - índice (média 2010 = 100)
+3995;GAC12_TCERCHL12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Chile  - índice (média 2010 = 100)
+3996;GAC12_TCERCHN12;Taxa de câmbio real bilateral - IPA-DI - Brasil/China  - índice (média 2010 = 100)
+3997;GAC12_TCERCOL12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Colômbia - índice (média 2010 = 100)
+3998;GAC12_TCERDEU12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Alemanha - índice (média 2010 = 100)
+3999;GAC12_TCEREGY12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Egito - índice (média 2010 = 100)
+4000;GAC12_TCERESP12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Espanha - índice (média 2010 = 100)
+4001;GAC12_TCEREUA12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Estados Unidos - índice (média 2010 = 100)
+4002;GAC12_TCERFRA12;Taxa de câmbio real bilateral - IPA-DI - Brasil/França - índice (média 2010 = 100)
+4003;GAC12_TCERGBR12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Reino Unido - índice (média 2010 = 100)
+4004;GAC12_TCERHKG12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Hong Kong - índice (média 2010 = 100)
+4005;GAC12_TCERIDN12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Indonésia - índice (média 2010 = 100)
+4006;GAC12_TCERIND12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Índia - índice (média 2010 = 100)
+4007;GAC12_TCERITA12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Itália - índice (média 2010 = 100)
+4008;GAC12_TCERJPN12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Japão - índice (média 2010 = 100)
+4009;GAC12_TCERKOR12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Coreia do Sul - índice (média 2010 = 100)
+4010;GAC12_TCERMBCD12;Taxa de câmbio - efetiva real - IPA-EP-DI - importações - bens duráveis - índice (média 2010 = 100)
+4011;GAC12_TCERMBCND12;Taxa de câmbio - efetiva real - IPA-EP-DI - importações - bens não duráveis - índice(média 2010=100)
+4012;GAC12_TCERMBI12;Taxa de câmbio - efetiva real - IPA-EP-DI - importações - bens interm. - índice(média 2010=100)
+4013;GAC12_TCERMBK12;Taxa de câmbio - efetiva real - IPA-EP-DI - importações - bens de capital - índice(média 2010 = 100)
+4014;GAC12_TCERMCOMB12;Taxa de câmbio - efetiva real - IPA-EP-DI - importações - combustíveis - índice (média 2010 = 100)
+4015;GAC12_TCERMEX12;Taxa de câmbio real bilateral - IPA-DI - Brasil/México - índice (média 2010 = 100)
+4016;GAC12_TCERMT12;Taxa de câmbio - efetiva real - IPA-DI - importações - índice (média 2010 = 100)
+4017;GAC12_TCERMTINPC12;Taxa de câmbio - efetiva real - INPC - importações - índice (média 2010 = 100)
+4018;GAC12_TCERNLD12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Holanda - índice (média 2010 = 100)
+4019;GAC12_TCERPER12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Peru - índice (média 2010 = 100)
+4020;GAC12_TCERPRY12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Paraguai - índice (média 2010 = 100)
+4021;GAC12_TCERSAU12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Arábia Saudita - índice (média 2010 = 100)
+4022;GAC12_TCERURY12;Taxa de câmbio real bilateral - IPA-DI - Brasil/Uruguai - índice (média 2010 = 100)
+4023;GAC12_TCERXB12;Taxa de câmbio - efetiva real - IPA Ponderado - exportações - básicos - índice (média 2010 = 100)
+4024;GAC12_TCERXM12;Taxa de câmbio - efetiva real - IPA-DI-Origem - exportações - manufaturados - índ.(média 2010 = 100)
+4025;GAC12_TCERXMINPC12;Taxa de câmbio - efetiva real - INPC - exportações - manufaturados - índice (média 2010 = 100)
+4026;GAC12_TCERXSM12;Taxa de câmbio - efetiva real - IPA-DI-Origem- exportações- semimanufaturados - índ.(média 2010=100)
+4027;GAC12_TCERXT12;Taxa de câmbio - efetiva real - IPA-DI - exportações - índice (média 2010 = 100)
+4028;GAC12_TCERXTINPC12;Taxa de câmbio - efetiva real - INPC - exportações - índice (média 2010 = 100)
+4029;GAC12_TCERXTS1012;Taxa de câmbio - efetiva real - fabricação de produtos alimentícios (média 2010 = 100)
+4030;GAC12_TCERXTS1112;Taxa de câmbio - efetiva real - fabricação de bebidas (média 2010 = 100)
+4031;GAC12_TCERXTS112;Taxa de câmbio - efetiva real - agricultura, pecuária e serviços relacionados (média 2010 = 100)
+4032;GAC12_TCERXTS1212;Taxa de câmbio - efetiva real - fabricação de produtos do fumo (média 2010 = 100)
+4033;GAC12_TCERXTS1312;Taxa de câmbio - efetiva real - fabricação de produtos têxteis (média 2010 = 100)
+4034;GAC12_TCERXTS1412;Taxa de câmbio - efetiva real - confecção de artigos do vestuário e acessórios (média 2010 = 100)
+4035;GAC12_TCERXTS1512;Taxa de câmbio - efetiva real - preparação e fabricaçao de artigos de couro e calçados(média2010=100
+4036;GAC12_TCERXTS1612;Taxa de câmbio - efetiva real - fabricação de produtos de madeira (média 2010 = 100)
+4037;GAC12_TCERXTS1712;Taxa de câmbio - efetiva real - fabricação de celulose, papel e produtos de papel (média 2010= 100)
+4038;GAC12_TCERXTS1812;Taxa de câmbio - efetiva real - impressão e reprodução de gravações (média 2010 = 100)
+4039;GAC12_TCERXTS1912;Taxa de câmbio - efetiva real - fabricação de coque,deriv.do petróleo e biocombustível(média2010=100
+4040;GAC12_TCERXTS2012;Taxa de câmbio - efetiva real - fabricação de produtos químicos (média 2010 = 100)
+4041;GAC12_TCERXTS2112;Taxa de câmbio - efetiva real - fabricação de prod. de farmoquímicos e farmacêuticos(média 2010=100)
+4042;GAC12_TCERXTS212;Taxa de câmbio - efetiva real - produção florestal (média 2010 = 100)
+4043;GAC12_TCERXTS2212;Taxa de câmbio - efetiva real - fabricação de prod.de borracha e de material plástico(média 2010=100
+4044;GAC12_TCERXTS2312;Taxa de câmbio - efetiva real - fabricação de produtos de minerais não-metálicos (média 2010 = 100)
+4045;GAC12_TCERXTS2412;Taxa de câmbio - efetiva real - metalurgia (média 2010 = 100)
+4046;GAC12_TCERXTS2512;Taxa de câmbio - efetiva real - fabricação de prod.de metal, exceto máq. e equipamentos(média2010=10
+4047;GAC12_TCERXTS2612;Taxa de câmbio - efetiva real - fabricação de equip. de info, eletrônicos e ópticos (média 2000=100)
+4048;GAC12_TCERXTS2712;Taxa de câmbio - efetiva real - fabricação de máquinas, aparelhos e mat. elétricos (média 2010 =100)
+4049;GAC12_TCERXTS2812;Taxa de câmbio - efetiva real - fabricação de máquinas e equipamentos (média 2010 = 100)
+4050;GAC12_TCERXTS2912;Taxa de câmbio - efetiva real - fabricação de veículos auto, reboques e carrocerias (média 2010=100)
+4051;GAC12_TCERXTS3012;Taxa de câmbio - efetiva real - fabricação de outros equipamentos de transporte (média 2010 = 100)
+4052;GAC12_TCERXTS3112;Taxa de câmbio - efetiva real - fabricação de móveis (média 2010 = 100)
+4053;GAC12_TCERXTS312;Taxa de câmbio - efetiva real - pesca e aqüicultura (média 2010 = 100)
+4054;GAC12_TCERXTS3212;Taxa de câmbio - efetiva real - fabricação de produtos diversos (média 2010 = 100)
+4055;GAC12_TCERXTS612;Taxa de câmbio - efetiva real - extração de petróleo e gás natural  (média 2010 = 100)
+4056;GAC12_TCERXTS712;Taxa de câmbio - efetiva real - extração de minerais metálicos (média 2010 = 100)
+4057;GAC12_TCERXTS812;Taxa de câmbio - efetiva real - extração de minerais não-metálicos (média 2010 = 100)
+4058;GM12_BLACKF12;Taxa de câmbio - R$ / US$ - paralelo - venda - fim período
+4059;GM366_ERC366;Taxa de câmbio - R$ / US$ - comercial - compra - média
+4061;GM366_ERPV366;Taxa de câmbio - R$ / US$ - paralelo - venda - média
+4062;GM366_ERTUR366;Taxa de câmbio - R$ / US$ - turismo - venda - média
+4063;GM366_ERV366;Taxa de câmbio - R$ / US$ - comercial - venda - média
+4064;GM366_ERVV366;Taxa de câmbio - R$ / US$ - comercial - venda - média - volatilidade
+4067;HIST_ERVL;Taxa de câmbio - libra esterlina / mil réis - RJ
+4068;HIST12_ERV12;Taxa de câmbio - libra esterlina / mil réis - RJ
+4069;HIST12_ERVBA12;Taxa de câmbio - libra esterlina / mil réis - BA
+4070;HIST12_ERVMA12;Taxa de câmbio - libra esterlina / mil réis - MA
+4071;HIST12_ERVPE12;Taxa de câmbio - libra esterlina / mil réis - PE
+7032;PAN_ERV;Taxa de câmbio nominal
+7051;PAN_TCERXTINPC;Taxa de câmbio - efetiva real - INPC - exportações - índice (média 2010 = 100)
+7058;PAN12_ERV12;Taxa de câmbio nominal
+7072;PAN12_TCERXTINPC12;Taxa de câmbio - efetiva real - INPC - exportações - índice (média 2010 = 100)
+7079;PAN4_ERV4;Taxa de câmbio nominal
+7097;PAN4_TCERXTINPC4;Taxa de câmbio - efetiva real - INPC - exportações - índice (média 2010 = 100)

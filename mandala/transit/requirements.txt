@@ -1,0 +1,8 @@
+pandas
+numpy
+pyodbc
+sqlalchemy
+xlrd
+pyopendata
+bs4
+requests
