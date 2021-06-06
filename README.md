@@ -2,7 +2,7 @@
 ## About
 
 This repo contains some of my first Python projects, most of them scripts that extract data from public sources.
-Each folder contains roughly the same file structure: the main script,  a functions folder, a list of  the required packages an their resective README explaining the script/data source.
+Each folder contains roughly the same file structure: the main script,  a functions folder, a list of  the required packages an their respective README explaining the script/data source.
 
 ## ⚠ Disclaimer 
 
