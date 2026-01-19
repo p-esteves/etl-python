@@ -2,13 +2,33 @@ import pandas as pd
 import numpy as np
 from functions.db import db_connect
 
-df = pd.read_excel("https://www.oecd.org/economy/reform/OECD-PMR-Economy%20-Wide%20Indicator%20values-2018.xlsx",sheet_name='PMR_Total_Eco',skiprows=4)
+"""
+SCRIPT: OCDE - Indicadores PMR (Product Market Regulation)
+DESCRIÇÃO: Extrai dados de regulação de mercado (PMR) do Excel da OCDE, seleciona colunas relevantes e carrega no banco.
+"""
 
+# =============================================================================
+# PASSO 1: EXTRAÇÃO
+# =============================================================================
+url = "https://www.oecd.org/economy/reform/OECD-PMR-Economy%20-Wide%20Indicator%20values-2018.xlsx"
+print(f"Baixando dados da OCDE: {url}")
+
+# Pula 4 linhas de cabeçalho
+df = pd.read_excel(url, sheet_name='PMR_Total_Eco', skiprows=4)
+
+# =============================================================================
+# PASSO 2: TRANSFORMAÇÃO E LIMPEZA
+# =============================================================================
+
+print("Limpando dados...")
+# Remove as últimas 13 linhas (rodapé/info adicional)
 df = df.iloc[:-13]
 
+# Remove as últimas 22 colunas (colunas indesejadas/vazias?)
+# Nota: Lógica baseada em posição fixa, pode ser frágil se o layout mudar.
 df = df[df.columns[:-22]]
 
-#df.to_excel("teste.xlsx")  
+# Renomeia colunas para português
 df.columns = ['NM_LOCAL'	,'DT_DADO'	,'VL_INDICADOR_PMR',
               'VL_INTERF_ESTADO'	,'VL_BARREIRAS_ENTRADA',
               'VL_PROPRIEDADE_PUBLICA',	'VL_ENVOLVIMENTO_NEGOCIOS',
@@ -20,14 +40,21 @@ df.columns = ['NM_LOCAL'	,'DT_DADO'	,'VL_INDICADOR_PMR',
               'VL_BARREIRAS_SETORES_REDE',	'VL_BARREIRAS_FDI','VL_BARREIRAS_TARIFAS',
               'VL_TRATAMENTO_FORNECEDORES',	'VL_BARREIRAS_FACILITACAO']
 
+# Filtra linhas que não são países (remove agregados por estado dos EUA e países não-OCDE se necessário)
 df = df[df.NM_LOCAL != 'By US States:']
 df = df[df.NM_LOCAL != 'Non-OECD countries']
 
-#remover pequena letra da legenda. (?)
+# =============================================================================
+# PASSO 3: CARGA NO BANCO
+# =============================================================================
 
-
-#inserir
+print("Carga no banco...")
 con = db_connect(package = 'sqlalchemy')
 cols = list(df.columns)
 df.to_sql('OCDE_INDICADOR_PMR', con, if_exists = 'replace', index = False, chunksize = int(2100/(len(cols) + 1)), method = 'multi')
-con.close()
+
+try:
+    con.close()
+except:
+    pass
+print("Concluído.")

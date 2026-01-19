@@ -1,38 +1,59 @@
 import sqlalchemy
 import pyodbc
-import json
+import os
 
-def db_connect(db_name = "DDTM_OBSERVATORIO_2" , credentials_file_path = "parameters/credentials.json", package = 'pyodbc'):
+def db_connect(db_name="DDTM_OBSERVATORIO_2", package='pyodbc'):
+    """
+    Estabelece conexao com o banco de dados usando variaveis de ambiente.
+    Remove a dependencia de arquivo local 'credentials.json' para seguranca.
+    """
+    server = os.getenv('DB_SERVER')
+    database = db_name
+    username = os.getenv('DB_USERNAME')
+    password = os.getenv('DB_PASSWORD')
+    driver = os.getenv('DB_DRIVER', '{ODBC Driver 17 for SQL Server}')
 
-    credentials_file = open(credentials_file_path, 'r').read()
-    credentials_file = json.loads(credentials_file)
+    if not all([server, username, password]):
+        # Se nao houver credenciais, gera um aviso ou erro, mas nao falha silenciosamente
+        print("AVISO: Variaveis de ambiente de banco de dados nao definidas (DB_SERVER, DB_USERNAME, DB_PASSWORD).")
+        # raise ValueError("Credenciais ausentes") # Descomentar se quiser forcar o erro
 
     if package == 'pyodbc':
-
-        con = pyodbc.connect('Driver={0};Server={1};Database={2};UID={3};PWD={4}'.format(
-            credentials_file['driver'],
-            credentials_file['server'],
-            db_name,
-            credentials_file['username'],
-            credentials_file['password']))
+        connection_string = 'Driver={0};Server={1};Database={2};UID={3};PWD={4}'.format(
+            driver, server, database, username, password)
+        try:
+            con = pyodbc.connect(connection_string)
+        except Exception as e:
+            print(f"Erro conexao pyodbc: {e}")
+            raise e
     
     else:
-
-        con = sqlalchemy.create_engine('mssql+pyodbc://{0}:{1}@{2}/{3}?driver={4}'.format(
-            credentials_file['username'],
-            credentials_file['password'], 
-            credentials_file['server'],
-            db_name,
-            credentials_file['driver'].replace('{', '').replace('}','')), fast_executemany=True)
-
-        con = con.connect()
+        # SQLAlchemy connection logic
+        # Ajuste para garantir formato correto da URL de conexao
+        driver_clean = driver.replace('{', '').replace('}', '')
+        connection_url = sqlalchemy.engine.URL.create(
+            "mssql+pyodbc",
+            username=username,
+            password=password,
+            host=server,
+            database=database,
+            query={"driver": driver_clean}
+        )
+        try:
+            con = sqlalchemy.create_engine(connection_url, fast_executemany=True)
+            # Testa a conexao
+            # con = con.connect() # Nao conectar imediatamente para permitir criar a engine apenas
+        except Exception as e:
+             print(f"Erro criacao engine sqlalchemy: {e}")
+             raise e
 
     return con
 
 if __name__ == '__main__':
-
-    con = db_connect(db_name = "DDTM_OBSERVATORIO_2" , 
-                     credentials_file_path = "parameters/credentials.json", 
-                     package = 'sqlalchemy')
-
-
+    try:
+        con = db_connect(package='sqlalchemy')
+        # Tenta conectar
+        with con.connect() as connection:
+             print("Conexao bem sucedida!")
+    except Exception as e:
+        print(f"Erro ao conectar: {e}")
