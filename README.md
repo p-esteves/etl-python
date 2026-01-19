@@ -1,7 +1,6 @@
 # Projeto Mandala - Custo Brasil (ETL Python)
 
 ## Sobre o Projeto
-## Sobre o Projeto
 Este repositório contém o conjunto de scripts de ETL (Extração, Transformação e Carga) desenvolvidos para o projeto **Mandala**, uma iniciativa estratégica do **Observatório da Indústria da FIEC** em parceria com o **Ministério da Economia**.
 
 O objetivo da Mandala é monitorar e propor ações para reduzir o **Custo Brasil**, estimado em **R$ 1,5 trilhão por ano** (aprox. 20,5% do PIB à época). Os indicadores são organizados em pilares como Capital Humano, Infraestrutura, Segurança Jurídica e Carga Tributária.
